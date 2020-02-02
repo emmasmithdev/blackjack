@@ -48,4 +48,9 @@ public class PlayerTest {
         player1.addCard(card2);
         assertEquals(11, player1.handTotal());
     }
+
+    @Test
+    public void canTwist(){
+
+    }
 }

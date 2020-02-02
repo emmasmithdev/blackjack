@@ -29,11 +29,22 @@ public class UI {
             System.out.println(name + " has the " + card1 + " and the " + card2);
         }
 
+    public void printDealerCards(Dealer dealer) {
+        String card1 = dealer.viewCards().get(0);
+        String card2 = dealer.viewCards().get(1);
+        System.out.println("Dealer has the " + card1 + " and the " + card2);
+    }
+
         public void printPlayerScore(Player player){
             String name = player.getName();
             int total = player.handTotal();
             System.out.println(name + "'s total is: " + total);
         }
+
+    public void printDealerScore(Dealer dealer){
+        int total = dealer.handTotal();
+        System.out.println("Dealer's total is: " + total);
+    }
 
         public void twistStickBustMessage(Player player) {
             String name = player.getName();
@@ -49,5 +60,9 @@ public class UI {
                     }
                     while ("T".equals(reply));
             }
+        }
+
+        public void printWinnerMessage(String name){
+            System.out.println(name + " wins!");
         }
     }

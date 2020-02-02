@@ -53,4 +53,11 @@ public class DealerTest {
         assertEquals(48, dealer.deckSize());
     }
 
+    @Test
+    public void canCheckWhoWins(){
+        dealer.addPlayer(player1);
+        dealer.dealRound();
+        assertEquals("Emma", dealer.compareHands(player1));
+    }
+
 }

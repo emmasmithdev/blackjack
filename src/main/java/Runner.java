@@ -15,7 +15,10 @@ public class Runner {
         dealer.dealRound();
         ui.printPlayerCards(player1);
         ui.printPlayerScore(player1);
-        ui.twistStickBustMessage(player1);
-
+//        ui.twistStickBustMessage(player1);
+        ui.printDealerCards(dealer);
+        ui.printDealerScore(dealer);
+        String winner = dealer.compareHands(player1);
+        ui.printWinnerMessage(winner);
     }
 }
