@@ -32,20 +32,10 @@ public class Deck {
     public Card deal() {
         int index = randomGenerator.nextInt(this.cards.size()-1);
         Card card = this.cards.get(index);
+        this.cards.remove(card);
         return card;
     }
 
-
-//    public void shuffle() {
-//        ArrayList<Card> temp = new ArrayList<>();
-//
-//        while(!this.cards.isEmpty()) {
-//            int index = (int)(Math.random() * this.cards.size());
-//            temp.add(this.cards.get(index));
-//            this.cards.remove(index);
-//        }
-//        this.cards = temp;
-//    }
 
     public void shuffle(){
         Collections.shuffle(this.cards);

@@ -1,12 +1,19 @@
 public class Runner {
 
     public static void main(String[] args) {
+
         UI ui = new UI();
-        Deck deck = new Deck();
+        Dealer dealer = new Dealer();
+
         ui.welcome();
         String name = ui.playerName();
-        ui.printPlayersCard(name);
-        deck.deal();
-        deck.shuffle();
+        Player player1 = new Player(name);
+        dealer.addPlayer(player1);
+        ui.printShuffleMessage();
+        dealer.shuffleDeck();
+        ui.printDealMessage();
+        dealer.dealRound();
+        ui.printPlayerCards(player1);
+
     }
 }
