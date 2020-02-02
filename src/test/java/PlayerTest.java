@@ -41,4 +41,11 @@ public class PlayerTest {
         assertEquals("QUEEN of HEARTS", returnedCard1);
         assertEquals("ACE of DIAMONDS", returnedCard2);
     }
+
+    @Test
+    public void canGetTotalCardScore(){
+        player1.addCard(card);
+        player1.addCard(card2);
+        assertEquals(11, player1.handTotal());
+    }
 }

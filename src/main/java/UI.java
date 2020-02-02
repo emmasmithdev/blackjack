@@ -29,4 +29,25 @@ public class UI {
             System.out.println(name + " has the " + card1 + " and the " + card2);
         }
 
+        public void printPlayerScore(Player player){
+            String name = player.getName();
+            int total = player.handTotal();
+            System.out.println(name + "'s total is: " + total);
+        }
+
+        public void twistStickBustMessage(Player player) {
+            String name = player.getName();
+            int total = player.handTotal();
+            String reply = "T";
+                if (total > 21) {
+                    System.out.println(name + "you are bust.");
+                } else {
+                    do {
+                    Scanner sc = new Scanner(System.in);
+                    System.out.println("Enter T to twist or S to stick: ");
+                    reply = sc.nextLine().toUpperCase();
+                    }
+                    while ("T".equals(reply));
+            }
+        }
     }

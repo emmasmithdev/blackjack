@@ -14,6 +14,8 @@ public class Runner {
         ui.printDealMessage();
         dealer.dealRound();
         ui.printPlayerCards(player1);
+        ui.printPlayerScore(player1);
+        ui.twistStickBustMessage(player1);
 
     }
 }

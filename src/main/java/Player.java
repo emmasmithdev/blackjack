@@ -32,4 +32,12 @@ public class Player {
         }
         return cardList;
     }
+
+    public int handTotal(){
+        int total = 0;
+        for(Card card : this.hand){
+            total += card.getCardValue();
+        }
+        return total;
+    }
 }
